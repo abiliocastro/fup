@@ -1,3 +1,55 @@
+/* QUESTÃO:
+Implemente um programa que recebe uma matriz quadrada de dimensão n x n e informe se ela é uma matriz diagonal inferior ou não.
+
+Numa matriz diagonal inferior, todos os elementos acima da diagonal principal são iguais a 0. 
+Os elementos da diagonal principal ou abaixo dela podem assumir valores quaisquer.
+
+Entrada:
+
+3
+
+7 0 0
+
+6 2 0
+
+1 3 4
+
+Saída:
+
+SIM
+
+Entrada:
+
+4
+
+7 0 0 0
+
+6 2 0 0
+
+1 3 4 5
+
+5 2 7 1
+
+Saída:
+
+NAO
+
+Entrada:
+
+4
+
+7 0 0 0
+
+6 2 0 0
+
+1 3 0 0
+
+5 2 7 1
+
+Saída:
+
+SIM */
+
 #include <stdio.h>
 
 int main(){
