@@ -1,26 +1,3 @@
-/* QUESTÃO: 
-Implemente um programa que irá simular a mega-sena.
-
-O programa vai receber do usuário 6 números entre 1 a 60. 
-O programa deve fazer a verificação se os 6 números realmente estão entre o intervalo, 
-não permitindo números fora do intervalo. Além disso não pode ter números repetidos.
-
-O programa então irá gerar aleatoriamente 6 números entre 1 a 60, evitando números repetidos e deve imprimir esses números. 
-
-Depois ele deve comparar com os 6 números escolhidos pelo usuário e informar se o usuário acertou os 6 números imprimindo "mega",
-ou acertou 5 números imprimindo "quina", ou "quadra", "terno", "dupla", "falta de sorte" ou "azarado". 
-Para cada uma das opções imprima os números que o usuário acertou.
-
-Exemplo:
-
-Entrada:9 3 29 34 20 49
-
-49 34 9 13 22 3
-
-Saída: Quadra: 49 34 9 3
-
-OBS: NÃO TEM CASOS DE TESTE E OBRIGATORIAMENTE DEVE-SE USAR VETOR */
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -95,7 +72,28 @@ int main(){
 		
 	}
 	
-	
-	
 	return 0;
 }
+
+/* QUESTÃO: 
+Implemente um programa que irá simular a mega-sena.
+
+O programa vai receber do usuário 6 números entre 1 a 60. 
+O programa deve fazer a verificação se os 6 números realmente estão entre o intervalo, 
+não permitindo números fora do intervalo. Além disso não pode ter números repetidos.
+
+O programa então irá gerar aleatoriamente 6 números entre 1 a 60, evitando números repetidos e deve imprimir esses números. 
+
+Depois ele deve comparar com os 6 números escolhidos pelo usuário e informar se o usuário acertou os 6 números imprimindo "mega",
+ou acertou 5 números imprimindo "quina", ou "quadra", "terno", "dupla", "falta de sorte" ou "azarado". 
+Para cada uma das opções imprima os números que o usuário acertou.
+
+Exemplo:
+
+Entrada:9 3 29 34 20 49
+
+49 34 9 13 22 3
+
+Saída: Quadra: 49 34 9 3
+
+OBS: NÃO TEM CASOS DE TESTE E OBRIGATORIAMENTE DEVE-SE USAR VETOR */
