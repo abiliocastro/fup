@@ -14,9 +14,7 @@ int main(){
 		scanf("%d", &n);
 	}
 	
-	n++;
-	
-	char palavra[n];
+	char palavra[n + 1];
 	
 	int inf = 'a';
 	int sup = 'z';
@@ -24,7 +22,7 @@ int main(){
 	char vogais[5] = "aeiou";
 	char v, c;
 	
-	for(int i = 0; i < (n - 1); i++){
+	for(int i = 0; i < n; i++){
 		if(i % 2 == 0){
 			v = rand() % 5;
 			palavra[i] = vogais[v];
@@ -36,44 +34,48 @@ int main(){
 			palavra[i] = c;
 		}
 	}
-	palavra[n-1] = '\0';
+	palavra[n] = '\0';
 	
 	printf("Palavra gerada!\n");
 	
-	int acertos = 0;
+	int saiu[n];
 	
-	int saiu[n-1];
-	
-	for(int i = 0; i < (n -1); i++){
+	for(int i = 0; i < n; i++){
 		saiu[i] = 0;
 	}
 	
 	int soma = 0;
+	int acertou = 0;
 	do{
 		soma = 0;
+		acertou = 0;
 		char chute;
 		printf("Escolha uma letra ");
 		scanf(" %c", &chute);
-		for(int i = 0; i < (n - 1); i++){
+		for(int i = 0; i < n; i++){
+			if(chute == palavra[i] && !saiu[i]) acertou = 1;
 			if(chute == palavra[i] || saiu[i]){
 				printf("%c ", palavra[i]);
 				saiu[i] = 1;
 			}
-			else{
+			else {
 				printf("_ ");
 			}
 		}
 		
-		printf("\n");
-		
-		for(int i = 0; i < (n -1); i++){
+		for(int i = 0; i < n; i++){
 			soma += saiu[i];
 		}
 		
-	}while(soma != (n - 1));
+		printf("\n");
+		
+		if(!acertou){
+			printf("Nao acertou\n");
+		}
+		
+	}while(soma != n);
 	
 	printf("Ganhou!");
-	
 	
 	return 0;
 }
